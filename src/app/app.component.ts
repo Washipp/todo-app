@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello-world';
+  newTask = {
+    isActive: false,
+    todoText: ''
+  };
+
+  tweet = {
+    isActive: true,
+    likesCount: 10
+  };
+
+  tasks = [
+    { isActive: false, todoText: 'This is a sample text11111'},
+    { isActive: true, todoText: 'This is a sample text22222'},
+    { isActive: false, todoText: 'This is a sample text3333'}
+  ];
+
+  onSave() {
+    this.tasks.push(
+      {isActive: this.newTask.isActive, todoText: this.newTask.todoText}
+      );
+  }
 }
