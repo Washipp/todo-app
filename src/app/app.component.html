@@ -4,4 +4,6 @@
     [todoText]="task.todoText"></app-todo>
 </div>
 
-<input type="text" [value]="newTask.todoText" (focusout)="onSave()">
+<div style="margin: 15px;">
+  <span class="glyphicon glyphicon-plus" (click)="addNewTask()" style="padding-right: 10px;"></span> Add New Task
+</div>

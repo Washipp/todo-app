@@ -17,7 +17,7 @@ export class AppComponent {
     { isActive: false, todoText: 'This is a sample text3333'}
   ];
 
-  onSave() {
+  addNewTask() {
     this.tasks.push(
       {isActive: this.newTask.isActive, todoText: this.newTask.todoText}
       );

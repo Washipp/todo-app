@@ -7,4 +7,5 @@
     type="text"
     (focusout)="onFocusOut()"
     [value]="todoText">
+  <span [class]="isSaved ? 'glyphicon glyphicon-ok' : 'glyphicon glyphicon-remove'"></span>
 </div>
