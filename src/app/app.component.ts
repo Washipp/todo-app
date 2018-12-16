@@ -11,11 +11,6 @@ export class AppComponent {
     todoText: ''
   };
 
-  tweet = {
-    isActive: true,
-    likesCount: 10
-  };
-
   tasks = [
     { isActive: false, todoText: 'This is a sample text11111'},
     { isActive: true, todoText: 'This is a sample text22222'},
