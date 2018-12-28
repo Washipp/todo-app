@@ -1,9 +1,3 @@
-<div *ngFor="let task of tasks">
-  <app-todo
-    [isActive]="task.isActive"
-    [todoText]="task.todoText"></app-todo>
-</div>
-
-<div style="margin: 15px;">
-  <span class="glyphicon glyphicon-plus" (click)="addNewTask()" style="padding-right: 10px;"></span> Add New Task
-</div>
+<app-todo></app-todo>
+<hr>
+<app-contact-form></app-contact-form>

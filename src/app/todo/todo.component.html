@@ -1,11 +1,9 @@
-<link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
-<div class="todo-div">
-  <span [class]="isActive ? 'glyphicon glyphicon-unchecked checked todo-button' : 'glyphicon glyphicon-unchecked todo-button'"
-        (click)="onChange()"></span>
-  <input
-    class="form-control input-text"
-    type="text"
-    (focusout)="onFocusOut()"
-    [value]="todoText">
-  <span [class]="isSaved ? 'glyphicon glyphicon-ok' : 'glyphicon glyphicon-remove'"></span>
+<div *ngFor="let task of tasks">
+  <app-task
+    [isActive]="task.isActive"
+    [todoText]="task.todoText"></app-task>
+</div>
+
+<div style="margin: 15px;" class="btn btn-primary" (click)="addNewTask()" >
+  <span class="glyphicon glyphicon-plus" style="padding-right: 10px;"></span> Add New Task
 </div>

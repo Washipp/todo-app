@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-todo',
@@ -6,23 +6,21 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent {
-  @Input('todoText') todoText: string;
-  @Input('isActive') isActive: boolean;
-  isSaved: boolean;
+  newTask = {
+    isActive: false,
+    todoText: ''
+  };
 
-  onFocusOut() {
-    console.log('selected: ' + this.isActive);
-    this.save();
-  }
+  tasks = [
+    { isActive: false, todoText: 'This is a sample text11111'},
+    { isActive: true, todoText: 'This is a sample text22222'},
+    { isActive: false, todoText: 'This is a sample text3333'}
+  ];
 
-  onChange() {
-    this.isActive = !this.isActive;
-    this.save();
-  }
-
-  save() {
-    this.isSaved = Math.floor((Math.random() * 5) + 1) !== 1;
-    console.log('has been saved: ' + this.isSaved);
+  addNewTask() {
+    this.tasks.push(
+      {isActive: this.newTask.isActive, todoText: this.newTask.todoText}
+    );
   }
 
 }
